@@ -1,5 +1,10 @@
 <?php include 'includes/header.php'; ?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Include Select2 CSS and JS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
 <section class="edit_profile_sect">
     <div class="container-fluid">
         <h3 class="page_title">Edit Profile</h3>
@@ -550,5 +555,13 @@
     </div>
 </section>
 
+<!-- Your JavaScript for initializing Select2 with closeOnSelect: false -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.js-example-basic-hide-search-multi').select2({
+            closeOnSelect: false
+        });
+    });
+</script>
 
 <?php include 'includes/footer.php'; ?>
